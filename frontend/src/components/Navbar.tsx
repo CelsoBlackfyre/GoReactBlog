@@ -16,7 +16,7 @@ export default function Navbar() {
           </button>
 
           <ul
-            tabindex="0"
+            tabIndex="0"
             className="menu dropdown-content z-[1] w-56 gap-2 rounded-box bg-base-200 p-6 shadow"
           >
             <li>

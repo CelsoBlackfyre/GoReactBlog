@@ -27,12 +27,18 @@ const API = 'http://localhost:8080';
 //   return axios.delete(`${API}/usuario/deletar`);
 // };
 //FUNCOES DE ACESSO
-export const registro = () => {
-  return axios.post(`${API}/api/registro`);
+export const registro = (dados: {
+  nome: string;
+  sobrenome: string;
+  telefone: string;
+  email: string;
+  senha: string;
+}) => {
+  return axios.post(`${API}/api/registro`, dados);
 };
 
-export const login = () => {
-  return axios.post(`${API}/api/login`);
+export const login = (dados: { email: string; senha: string }) => {
+  return axios.post(`${API}/api/login`, dados);
 };
 
 //FUNCOES DO USUARIO DO BLOG

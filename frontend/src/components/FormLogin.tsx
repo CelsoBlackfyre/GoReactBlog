@@ -1,21 +1,22 @@
 import { useState } from 'react';
 import { login } from '@/services/route';
 
-//Form para fazer o login
-
+///Tipo contendo as infos do usuario
 type Usuario = {
   email: string;
   senha: string;
 };
 
+//Funcao de exportar os conteudos de login
 export default function Login() {
   const [login, setLogin] = useState(false);
 
-  //funcao para verificar a senha
+  //Funcao para trocar os valores do login
   const handleChange = (e) => {
     setLogin(e.target.value);
   };
 
+  //Funcao para enviar os dados usuario e efetuar o login
   const handleSubmit = (e) => {
     e.preventDefault();
     const usuario: Usuario = {
@@ -27,6 +28,7 @@ export default function Login() {
 
   return (
     <>
+      {/* Form de Login usando ReactJS e Tailwind */}
       <label className="input input-bordered flex items-center gap-2">
         Email
         <input
